@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员订单表编辑界面</title>
+</head>
+<body>
+    <form action="admin_order_edit.php" method="post">
+    	<input type="hidden" name="oid" id="oid" value="<?php echo $orders['Oid'];?>" />
+        <table>
+        <!--用户id-->
+            <tr>
+                <td width="10%" >用户id</td>
+                <td width="40%" ><input type="text" id='uid' name="uid" value="<?php echo $orders['Uid'];?> "></td>
+            </tr>
+       	<!--用户id-->
+        <!--商品id-->
+        <tr>
+            <td width="10%" >商品id</td>
+            <td width="40%" ><input type="text" id='pid' name="pid" value="<?php echo $orders['Pid'];?> "></td>
+        </tr>
+		<!--商品id-->
+        <!--数量-->
+        <tr>
+            <td width="10%" >数量</td>
+            <td width="40%" ><input type="text" id='number' name="number" value="<?php echo $orders['number'];?> "></td>
+        </tr>
+        <!--数量-->
+        <!--总价-->
+        <tr>
+            <td width="10%" >总价</td>
+            <td width="40%" ><input type="text" id='Ototal_Amount' name="Ototal_Amount" value="<?php echo $orders['Ototal_Amount'];?> "></td>
+        </tr>
+        <!--总价-->
+        <!--时间-->
+        <tr>
+            <td width="10%" >下单时间</td>
+            <td width="40%" ><input type="text" id='otime' name="otime" value="<?php echo $orders['Otime'];?> "></td>
+        </tr>
+        <!--时间-->
+		 
+        <tr>
+            <td ></td>
+            <td colspan="3">
+                <input type="submit" class="btn btn-primary" value="保存"/>
+                &nbsp;&nbsp;
+                <a href="admin_order.php"><input type="button" class="btn btn-success" name="backid" id="backid" value="返回"/></a>
+                &nbsp;&nbsp;<font color="red"></font>
+            </td>
+        </tr>
+        </table>
+    </form>
+</body>
+</html>
